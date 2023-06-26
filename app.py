@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, url_for, request
 
 app = Flask(__name__)
 
-task_list = []
+
 
 @app.route("/", methods=["POST", "GET"])
 def index():
@@ -17,4 +17,5 @@ def index():
 
 
 if __name__ == "__main__":
+    task_list = []
     app.run(debug=True, port=4000)
