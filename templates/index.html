@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="container text-center pt-5 mt-5">
+        <h1>#ToDo</h1>
+    </div>
+    <div class="container">
+        <form class="w-100 no-bg" action="{{url_for('index')}}" method="post" id="taskForm">
+            <input class="form-control form-control-lg no-bg" type="text" pattern="^(?!\\s*$).+"
+                aria-label=".form-control-lg example" name="task" required>
+        </form>
+        {% for task in tasklist %}
+        <div class="checkbox-wrapper-11">
+            <input id="{{task}}checkbox" type="checkbox" name="r" value="2">
+            <label for="{{task}}checkbox" class="task">{{task}}</label><br>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+
+
+
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
