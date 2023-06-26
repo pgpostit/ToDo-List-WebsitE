@@ -17,7 +17,7 @@
     <div class="container">
         <form class="w-100 no-bg" action="{{url_for('index')}}" method="post" id="taskForm">
             <input class="form-control form-control-lg no-bg" type="text" pattern="^(?!\\s*$).+"
-                aria-label=".form-control-lg example" name="task" required>
+                aria-label=".form-control-lg example" name="task", placeholder="Digite uma tarefa e pressione enter." required>
         </form>
         {% for task in tasklist %}
         <div class="checkbox-wrapper-11">
